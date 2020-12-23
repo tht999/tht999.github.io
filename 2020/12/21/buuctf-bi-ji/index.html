@@ -319,7 +319,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -478,14 +478,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    683
+                    870
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    3 分
                 </div>
                 
                 
@@ -579,7 +579,23 @@
 <p>因为source与hint都在whitelist的白名单里面，这里就是类似于将这个题目定向</p>
 <p>没什么东西</p>
 <p>flag{7c4ca688-51e1-4235-958a-fad970c48f7b}</p>
-<h1 id="N1book"><a href="#N1book" class="headerlink" title="N1book"></a>N1book</h1><h2 id="第一章-web入门"><a href="#第一章-web入门" class="headerlink" title="[第一章 web入门]"></a>[第一章 web入门]</h2><h3 id="粗心的小李"><a href="#粗心的小李" class="headerlink" title="粗心的小李"></a>粗心的小李</h3>
+<h1 id="N1book"><a href="#N1book" class="headerlink" title="N1book"></a>N1book</h1><h2 id="第一章-web入门"><a href="#第一章-web入门" class="headerlink" title="[第一章 web入门]"></a>[第一章 web入门]</h2><h3 id="粗心的小李"><a href="#粗心的小李" class="headerlink" title="粗心的小李"></a>粗心的小李</h3><p>题目：</p>
+<p>Git测试</p>
+<p>Hello, CTFer!</p>
+<p>当前大量开发人员使用git进行版本控制，对站点自动部署。如果配置不当，可能会将.git文件夹直接部署到线上环境。这就引起了git泄露漏洞。</p>
+<hr>
+<p>小李好像不是很小心，经过了几次迭代更新就直接就把整个文件夹放到线上环境了:(</p>
+<p>very easy</p>
+<p>看网上说这是git测试，听别人看书说要用一个工具叫：scrabble，但是我没有书，所以我就不和他用一样的工具：Githack</p>
+<p>kali没有自己下载：</p>
+<pre><code>git clone https://github.com/BugScanTeam/GitHack
+cd GitHack
+python GitHack.py http://24015196-5385-41b6-9b92-02d1bdc92971.node3.buuoj.cn/.git</code></pre><p>然后就发现<img src="http://images2.5666888.xyz//%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20%E5%B9%B412%E6%9C%8823%E6%97%A50926_2.png" alt></p>
+<p>打开以后</p>
+<p><img src="http://images2.5666888.xyz//%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20%E5%B9%B412%E6%9C%8823%E6%97%A50927_3.png" alt></p>
+<p>n1book{git_looks_s0_easyfun}</p>
+<p>完事了</p>
+
             </div>
             <hr />
 
@@ -1063,34 +1079,33 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/12/21/buuctf-bi-ji/">
+                <a href="/2020/12/23/ctfhub-sui-bi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="Buuctf笔记">
+                        <img src="/medias/featureimages/28.jpg" class="responsive-img" alt="CtfHub随笔">
                         
-                        <span class="card-title">Buuctf笔记</span>
+                        <span class="card-title">CtfHub随笔</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            WEB第一题:[HCTF 2018]WarmUp这里懒得上传图片了，所以就直接笔记了
-源代码里面有1.source.php，所以打开以后还会发先2.hint.php
-1打开后会发现是代码审计
-&lt;?php
-    highlight_f
+                            WebWeb前置技能HTTP协议请求方式题目：
+
+HTTP Method is GET
+Use CTF**B Method, I will give you flag.
+Hint: If you got 「HTTP Method Not A
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-12-21
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-12-23
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -1103,16 +1118,15 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/buuctf/" target="_blank">
-                        <span class="chip bg-color">buuctf</span>
+                    <a href="/tags/入门/" target="_blank">
+                        <span class="chip bg-color">入门</span>
                     </a>
                     
-                    <a href="/tags/web入门/" target="_blank">
-                        <span class="chip bg-color">web入门</span>
+                    <a href="/tags/ctfhub/" target="_blank">
+                        <span class="chip bg-color">ctfhub</span>
                     </a>
                     
                 </div>
@@ -1130,7 +1144,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="lampiao渗透测试初探">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="lampiao渗透测试初探">
                         
                         <span class="card-title">lampiao渗透测试初探</span>
                     </div>
@@ -1162,12 +1176,12 @@ Try this brand new vulnerable machine! &quot;Lampiã
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/渗透测试/" target="_blank">
-                        <span class="chip bg-color">渗透测试</span>
-                    </a>
-                    
                     <a href="/tags/入门/" target="_blank">
                         <span class="chip bg-color">入门</span>
+                    </a>
+                    
+                    <a href="/tags/渗透测试/" target="_blank">
+                        <span class="chip bg-color">渗透测试</span>
                     </a>
                     
                 </div>
@@ -1341,7 +1355,7 @@ Try this brand new vulnerable machine! &quot;Lampiã
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">22.7k</span>
+            <span class="white-color">24.2k</span>
             
 
             <br>

