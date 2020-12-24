@@ -503,6 +503,41 @@ $(function () {
                     
 
                     
+                    
+
+<link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<div class="music-player">
+    
+    <div class="title center-align">
+        <i class="fa fa-music"></i>&nbsp;&nbsp;听听音乐
+    </div>
+    
+    <div class="row">
+        <div class="col l8 offset-l2 m10 offset-m1 s12">
+            <div id="aplayer" class="music"></div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script>
+$(function () {
+    new APlayer({
+        container: document.getElementById('aplayer'),
+        fixed: 'flase' === 'true',
+        autoplay: 'true' === 'true',
+        theme: '#542674',
+        loop: 'all',
+        order: 'list',
+        preload: 'auto',
+        volume: Number('0.7'),
+        listFolded: 'true' === 'true',
+        listMaxHeight: '',
+        audio: JSON.parse('[{"name":"余香","artist":"张小九","url":"http://images2.5666888.xyz/yuxiang.mp3","cover":"/medias/music/avatars/yuxiang.jpg"},{"name":"安和桥","artist":"宋冬野","url":"http://images2.5666888.xyz/anheqiao.mp3","cover":"/medias/music/avatars/anheqiao.jpg"},{"name":"南山南","artist":"马頔","url":"http://images2.5666888.xyz/nsn.mp3","cover":"/medias/music/avatars/nsn.jpg"},{"name":"烟袋斜街","artist":"接个吻，开一枪","url":"http://images2.5666888.xyz/ydxj.mp3","cover":"/medias/music/avatars/ydxj.jpg"}]')
+    });
+});
+</script>
+                    
 
                     
 
