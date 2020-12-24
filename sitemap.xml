@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://iceberg404.github.io/friends/index.html</loc>
+    
+    <lastmod>2020-12-24T02:40:18.664Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://iceberg404.github.io/2020/12/24/python-bi-ji/</loc>
     
     <lastmod>2020-12-24T02:13:28.097Z</lastmod>
@@ -47,13 +54,6 @@
     <loc>https://iceberg404.github.io/2020/12/19/blogbulider/</loc>
     
     <lastmod>2020-12-19T04:04:22.275Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://iceberg404.github.io/friends/index.html</loc>
-    
-    <lastmod>2020-12-18T08:07:42.682Z</lastmod>
     
   </url>
   
