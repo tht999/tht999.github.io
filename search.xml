@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>python笔记</title>
+      <link href="/2020/12/24/python-bi-ji/"/>
+      <url>/2020/12/24/python-bi-ji/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>1.此处想要输出汉字需要在一开始加一个编码：#coding=utf-8</p><p>2.python最具有特色的就是用缩进来写模块</p><p>3.”””xxx”””这里可以多行print</p><p>4.通过#注释</p><p>5.</p><pre><code>counter = 100#赋值整数型变量miles = 1000.0#赋值浮点型变量name = &quot;iceberg404&quot;#赋值字符串</code></pre><p>6.python五个标准的数据类型：numbers（数字）、string（字符串）、list（列表）、tuple（元组）、dictionary（字典）</p><p>7.</p><pre><code>int 有符号整数型long 长整数（也可以代表八进制和十六进制）float 浮点数complex 复数int（x，[,base]）将x转换为一个整数long（x，[,base]）将x转换为一个长整数float（x，[,base]）将x转换为一个浮点数float（x） 将x转换到一个浮点数str（x） 将对象x转换为字符串tuple（s） 将序列s转换为元组list（s） 将序列s转换为一个列表abs（-10）结果为10#返回数字的绝对值max（x1，x2，x3）#返回给定参数的最大值，参数可以为序列sqrt（x）#返回数字x的平方例：import cmatha=9999999print abs（a）print max （1，2，3，4，5）b=8print cmath.sqrt（b）返回结果：99999995（2.82842712475+0j）&quot;&quot;&quot;当我们在日常生活中编写程序时，我们通常遇到需要使用数学来完成任务的情况。像其他编程语言一样，Python提供了各种基本运算操作，如*代表乘法，%代表求模运算，//代表整除。如果您正在编写一个程序来执行特定任务，如研究周期运动或模拟电路，您将需要使用三角函数以及复数。虽然您不能直接使用这些功能，但您可以先导入两个数学模块来访问它们。这两个模块是math和cmath。第一个模块允许您访问实数的双曲线，三角函数和对数函数，而后者允许您使用复数。&quot;&quot;&quot;</code></pre><p>c+=a等效于c=c+a</p><pre><code>a=20.00b=20if（a is b）  print &quot;a is b&quot;else (a == b)  print &quot;a==b&quot;输出结果为a==b这是is和==之间的区别，此处由于a是浮点数，所以a不等于整数b，故a不是是b，但是a=b。</code></pre><pre><code>flag = Falsename = &#39;ice&#39;if name == &#39;py&#39;:  flag = True  print &#39;1&#39;else:  print name</code></pre><pre><code>count = 0while(count &lt; 5):  print count,&quot;is less than 5&quot;  count += 1else:  print count,&quot;is not less than 5&quot;print &quot;over&quot;</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 入门 </tag>
+            
+            <tag> python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>CtfHub随笔</title>
       <link href="/2020/12/23/ctfhub-sui-bi/"/>
       <url>/2020/12/23/ctfhub-sui-bi/</url>
