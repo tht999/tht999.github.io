@@ -1,7 +1,7 @@
-https://iceberg404.github.io/2020/12/24/python-bi-ji/
-https://iceberg404.github.io/2020/12/23/ctfhub-sui-bi/
-https://iceberg404.github.io/2020/12/21/buuctf-bi-ji/
-https://iceberg404.github.io/2020/12/19/lampiao-shen-tou-chu-tan/
-https://iceberg404.github.io/2020/12/19/blogbulider/
-https://iceberg404.github.io/2020/12/18/sqli/
-https://iceberg404.github.io/2020/02/16/sort-algorithms/
+https://tht999.github.io/2020/12/24/python-bi-ji/
+https://tht999.github.io/2020/12/23/ctfhub-sui-bi/
+https://tht999.github.io/2020/12/21/buuctf-bi-ji/
+https://tht999.github.io/2020/12/19/lampiao-shen-tou-chu-tan/
+https://tht999.github.io/2020/12/19/blogbulider/
+https://tht999.github.io/2020/12/18/sqli/
+https://tht999.github.io/2020/02/16/sort-algorithms/
