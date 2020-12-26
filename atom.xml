@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>网安小白</title>
+  <title>开发小白</title>
   
-  <subtitle>云凯の博客</subtitle>
+  <subtitle>皓亭の博客</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://iceberg404.github.io/"/>
@@ -10,7 +10,7 @@
   <id>https://iceberg404.github.io/</id>
   
   <author>
-    <name>杨云凯</name>
+    <name>唐皓亭</name>
     
   </author>
   
@@ -38,9 +38,9 @@
       <category term="编程" scheme="https://iceberg404.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
     
     
-      <category term="python" scheme="https://iceberg404.github.io/tags/python/"/>
-    
       <category term="入门" scheme="https://iceberg404.github.io/tags/%E5%85%A5%E9%97%A8/"/>
+    
+      <category term="python" scheme="https://iceberg404.github.io/tags/python/"/>
     
   </entry>
   
