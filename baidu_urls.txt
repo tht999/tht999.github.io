@@ -1,7 +1,1 @@
-https://tht999.github.io/2020/12/24/python-bi-ji/
-https://tht999.github.io/2020/12/23/ctfhub-sui-bi/
-https://tht999.github.io/2020/12/21/buuctf-bi-ji/
-https://tht999.github.io/2020/12/19/lampiao-shen-tou-chu-tan/
 https://tht999.github.io/2020/12/19/blogbulider/
-https://tht999.github.io/2020/12/18/sqli/
-https://tht999.github.io/2020/02/16/sort-algorithms/
